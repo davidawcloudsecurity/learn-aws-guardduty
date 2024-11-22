@@ -1,6 +1,10 @@
 # learn-aws-guardduty
 How to use and remediate guard duty
 
+- [ ] https://aws.github.io/aws-security-services-best-practices/guides/guardduty/
+- [ ] https://d1.awsstatic.com/events/Summits/reinvent2022/SEC301-R_Threat-detection-and-response-workshop.pdf
+- [ ] https://mng.workshop.aws/operations/detect/guardduty.html
+
 ### How to loop until findings appear
 ```bash
 while [[ -n $(aws guardduty list-findings --detector-id $(aws guardduty list-detectors --query DetectorIds[*] --output text)) ]]; do echo "$(aws guardduty list-findings --detector-id $(aws guardduty list-detectors --query DetectorIds[*] --output text))"; sleep 10; done; echo "Findings detected"
